@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Lemon Software">
+  <link href="lemon/03/assets/images/favicon/favicon.png" rel="icon">
+  <title>Contato - Lemon Software</title>
+  <link rel="stylesheet" href="css5989?family=Roboto:400,500,700%7cRubik:400,500,700&amp;display=swap">
+  <link rel="stylesheet" href="lemon/03/assets/css/libraries.css">
+  <link rel="stylesheet" href="lemon/03/assets/css/style.css">
+  <link rel="stylesheet" href="lemon/03/assets/css/header-mobile.css">
+  <link rel="stylesheet" href="font-awesome/latest/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <style>
+    :root {
+      --primary: #FFD700;
+      --secondary: #1a1a1a;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--secondary);
+      overflow-x: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hover-glow {
+      transition: all 0.3s ease;
+    }
+
+    .hover-glow:hover {
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .contact-card {
+      transition: all 0.5s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px) scale(1.02);
+    }
+
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 215, 0, 0.3);
+      border-radius: 50%;
+      animation: particle-float 15s infinite linear;
+    }
+
+    @keyframes particle-float {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      50% { transform: translateY(-100px) translateX(100px); opacity: 1; }
+      100% { transform: translateY(-200px) translateX(0); opacity: 0; }
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .form-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #FFD700;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+
+    .submit-button {
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      transition: all 0.3s ease;
+    }
+
+    .submit-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body class="text-white">
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-effect">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold gradient-text">Lemon Software</a>
+        <div class="hidden md:flex items-center">
+          <a href="index.html" class="nav-link">Início</a>
+          <a href="sobre-nos.html" class="nav-link">Sobre</a>
+          <a href="clientes.html" class="nav-link">Clientes</a>
+          <a href="orcamento.html" class="nav-link">Orçamento</a>
+          <div class="relative group ml-6">
+            <a href="solucoes-novo.html" class="nav-link">Soluções</a>
+            <div class="absolute hidden group-hover:block w-48 bg-dark-800 rounded-lg shadow-lg py-2">
+              <a href="desenvolvimento.html" class="block px-4 py-2 text-gray-300 hover:text-primary">Desenvolvimento</a>
+              <a href="automacao.html" class="block px-4 py-2 text-gray-300 hover:text-primary">Automação</a>
+            </div>
+          </div>
+        </div>
+        <button class="md:hidden text-white" id="mobile-menu-button">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 bg-dark-900 z-40 hidden" id="mobile-menu">
+    <div class="container mx-auto px-4 py-20">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-xl font-semibold hover:text-primary transition">Início</a>
+        <a href="sobre-nos.html" class="text-xl font-semibold hover:text-primary transition">Sobre</a>
+        <a href="clientes.html" class="text-xl font-semibold hover:text-primary transition">Clientes</a>
+        <a href="orcamento.html" class="text-xl font-semibold hover:text-primary transition">Orçamento</a>
+        <a href="solucoes-novo.html" class="text-xl font-semibold hover:text-primary transition">Soluções</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center" data-aos="fade-up">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">
+          <span class="gradient-text">Contato</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+          Estamos prontos para ajudar a transformar seu negócio
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="glass-effect p-8 rounded-2xl" data-aos="fade-right">
+          <h2 class="text-3xl font-bold mb-8">Envie sua mensagem</h2>
+          <form class="space-y-6">
+            <div>
+              <label class="block text-gray-300 mb-2">Nome</label>
+              <input type="text" class="form-input w-full px-4 py-3 rounded-lg text-white" placeholder="Seu nome completo">
+            </div>
+            <div>
+              <label class="block text-gray-300 mb-2">Email</label>
+              <input type="email" class="form-input w-full px-4 py-3 rounded-lg text-white" placeholder="seu@email.com">
+            </div>
+            <div>
+              <label class="block text-gray-300 mb-2">Telefone</label>
+              <input type="tel" class="form-input w-full px-4 py-3 rounded-lg text-white" placeholder="(00) 00000-0000">
+            </div>
+            <div>
+              <label class="block text-gray-300 mb-2">Mensagem</label>
+              <textarea class="form-input w-full px-4 py-3 rounded-lg text-white h-32" placeholder="Como podemos ajudar?"></textarea>
+            </div>
+            <button type="submit" class="submit-button w-full px-8 py-4 rounded-lg font-medium text-gray-900 text-lg">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+
+        <div class="space-y-8" data-aos="fade-left">
+          <div class="glass-effect p-8 rounded-2xl contact-card">
+            <div class="flex items-center mb-4">
+              <div class="text-4xl mr-4 gradient-text">📍</div>
+              <div>
+                <h3 class="text-xl font-bold">Endereço</h3>
+                <p class="text-gray-300">São Paulo, SP</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-effect p-8 rounded-2xl contact-card">
+            <div class="flex items-center mb-4">
+              <div class="text-4xl mr-4 gradient-text">📞</div>
+              <div>
+                <h3 class="text-xl font-bold">Telefone</h3>
+                <p class="text-gray-300">+55 (11) 99999-9999</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-effect p-8 rounded-2xl contact-card">
+            <div class="flex items-center mb-4">
+              <div class="text-4xl mr-4 gradient-text">✉️</div>
+              <div>
+                <h3 class="text-xl font-bold">Email</h3>
+                <p class="text-gray-300">contato@lemonsoftware.com.br</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-effect p-8 rounded-2xl contact-card">
+            <div class="flex items-center mb-4">
+              <div class="text-4xl mr-4 gradient-text">⏰</div>
+              <div>
+                <h3 class="text-xl font-bold">Horário de Atendimento</h3>
+                <p class="text-gray-300">Segunda a Sexta: 9h às 18h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-effect rounded-2xl overflow-hidden" data-aos="fade-up">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197353585618!2d-46.65867598502221!3d-23.56134918468293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1645555555555!5m2!1spt-BR!2sbr" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Particles effect
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.animationDelay = `${Math.random() * 15}s`;
+      particlesContainer.appendChild(particle);
+    }
+    
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Carregar o footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About -->
+            <div>
+                <h3 class="footer-title gradient-text">Lemon Software</h3>
+                <p class="text-gray-400 mb-4">Transformando ideias em soluções digitais desde 2020</p>
+                <div class="flex space-x-3">
+                    <a href="https://www.facebook.com/lemonsoftware" target="_blank" class="footer-social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/lemonsoftware" target="_blank" class="footer-social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/lemonsoftware" target="_blank" class="footer-social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/lemonsoftware" target="_blank" class="footer-social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="footer-title">Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html" class="footer-link">Início</a></li>
+                    <li><a href="solucoes-novo.html" class="footer-link">Soluções</a></li>
+                    <li><a href="sobre-nos.html" class="footer-link">Sobre</a></li>
+                    <li><a href="clientes.html" class="footer-link">Clientes</a></li>
+                    <li><a href="orcamento.html" class="footer-link">Orçamento</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="footer-title">Serviços</h3>
+                <ul>
+                    <li><a href="desenvolvimento.html" class="footer-link">Desenvolvimento Web</a></li>
+                    <li><a href="desenvolvimento.html" class="footer-link">Aplicativos Mobile</a></li>
+                    <li><a href="automacao.html" class="footer-link">Automação de Processos</a></li>
+                    <li><a href="kraken.html" class="footer-link">Kraken ERP</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="footer-title">Contato</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start text-gray-400">
+                        <i class="fas fa-envelope mt-1 mr-3 text-primary"></i>
+                        <a href="mailto:contato@lemonsoftware.com.br" class="hover:text-primary transition">contato@lemonsoftware.com.br</a>
+                    </li>
+                    <li class="flex items-start text-gray-400">
+                        <i class="fas fa-phone-alt mt-1 mr-3 text-primary"></i>
+                        <a href="tel:+5511999999999" class="hover:text-primary transition">(11) 99999-9999</a>
+                    </li>
+                    <li class="flex items-start text-gray-400">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                        <span>Av. Paulista, 1000<br>São Paulo, SP</span>
+                    </li>
+                    <li class="mt-4">
+                        <a href="contato.html" class="btn-gradient inline-flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Fale Conosco
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Lemon Software. Todos os direitos reservados.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-primary mx-2 transition">Política de Privacidade</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="text-gray-400 hover:text-primary mx-2 transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" class="fixed bottom-6 right-6 bg-primary text-secondary w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    // Add smooth scroll to top button if it exists
+    const scrollTopButton = document.getElementById('scroll-top');
+    if (scrollTopButton) {
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Show/hide scroll to top button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopButton.classList.remove('opacity-0', 'invisible');
+                scrollTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                scrollTopButton.classList.remove('opacity-100', 'visible');
+                scrollTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+    }
+</script>

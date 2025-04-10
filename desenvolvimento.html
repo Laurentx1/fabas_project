@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Lemon Software - Desenvolvimento de Software e Aplicativos">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Lemon Software - Desenvolvimento</title>
+  
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Hero Section -->
+  <section class="section pt-32" aria-labelledby="hero-heading">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+          <h1 id="hero-heading" class="text-4xl md:text-5xl font-bold mb-6">
+            <span class="gradient-text">Desenvolvimento</span> de Software
+          </h1>
+          <p class="text-xl text-gray-300 mb-8">
+            Soluções personalizadas para transformar sua empresa e impulsionar seu crescimento no mundo digital.
+          </p>
+          <a href="orcamento.html" class="btn-gradient">Solicitar Orçamento</a>
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <img src="assets/images/development.svg" alt="Desenvolvimento de Software" class="w-full max-w-lg mx-auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="services-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Nossos Serviços
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="text-xl font-bold mb-4">Desenvolvimento Web</h3>
+          <p class="text-gray-300 mb-6">Sites e sistemas web modernos e responsivos, com foco em usabilidade e performance.</p>
+          <ul class="text-left space-y-2 mb-6">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Sites institucionais</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>E-commerce</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Sistemas web</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Portais corporativos</span>
+            </li>
+          </ul>
+          <a href="orcamento.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-4">📱</div>
+          <h3 class="text-xl font-bold mb-4">Aplicativos Mobile</h3>
+          <p class="text-gray-300 mb-6">Apps nativos e híbridos para iOS e Android, com design intuitivo e alta performance.</p>
+          <ul class="text-left space-y-2 mb-6">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Apps para iOS</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Apps para Android</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Apps híbridos</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>PWA (Progressive Web Apps)</span>
+            </li>
+          </ul>
+          <a href="orcamento.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="text-xl font-bold mb-4">Integrações</h3>
+          <p class="text-gray-300 mb-6">Conecte seus sistemas e automatize processos para aumentar a eficiência operacional.</p>
+          <ul class="text-left space-y-2 mb-6">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>APIs RESTful</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Webhooks</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Integrações com ERPs</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Integrações com CRMs</span>
+            </li>
+          </ul>
+          <a href="orcamento.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="section bg-secondary-dark" aria-labelledby="technologies-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="technologies-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Tecnologias que Utilizamos
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-4">Frontend</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <div>
+                <span class="font-semibold">React.js e Next.js</span>
+                <p class="text-gray-400 text-sm">Para interfaces modernas e interativas com excelente performance.</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <div>
+                <span class="font-semibold">Vue.js e Nuxt.js</span>
+                <p class="text-gray-400 text-sm">Framework progressivo para construção de interfaces de usuário.</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <div>
+                <span class="font-semibold">Angular</span>
+                <p class="text-gray-400 text-sm">Plataforma robusta para desenvolvimento de aplicações web.</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <div>
+                <span class="font-semibold">Tailwind CSS</span>
+                <p class="text-gray-400 text-sm">Framework CSS utilitário para designs personalizados e responsivos.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-4">Backend</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <div>
+                <span class="font-semibold">Node.js e Express</span>
+                <p class="text-gray-400 text-sm">Para APIs rápidas e escaláveis com JavaScript.</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <div>
+                <span class="font-semibold">Python e Django</span>
+                <p class="text-gray-400 text-sm">Framework completo para desenvolvimento rápido e seguro.</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <div>
+                <span class="font-semibold">Java e Spring</span>
+                <p class="text-gray-400 text-sm">Para sistemas robustos e de alta performance.</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <div>
+                <span class="font-semibold">Bancos de Dados</span>
+                <p class="text-gray-400 text-sm">MySQL, PostgreSQL, MongoDB, Redis e mais.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section" aria-labelledby="process-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="process-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Nosso Processo de Desenvolvimento
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 rounded-full bg-primary text-secondary flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="text-xl font-bold mb-4">Descoberta</h3>
+          <p class="text-gray-300">Entendemos suas necessidades e objetivos para definir o escopo do projeto.</p>
+        </div>
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 rounded-full bg-primary text-secondary flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="text-xl font-bold mb-4">Planejamento</h3>
+          <p class="text-gray-300">Definimos a arquitetura, tecnologias e cronograma do projeto.</p>
+        </div>
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-full bg-primary text-secondary flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="text-xl font-bold mb-4">Desenvolvimento</h3>
+          <p class="text-gray-300">Utilizamos metodologias ágeis para desenvolver e testar continuamente.</p>
+        </div>
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-16 h-16 rounded-full bg-primary text-secondary flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+          <h3 class="text-xl font-bold mb-4">Entrega</h3>
+          <p class="text-gray-300">Implementamos a solução e oferecemos suporte contínuo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-secondary-dark" aria-labelledby="cta-heading">
+    <div class="container mx-auto px-6">
+      <div class="glass-card p-8 text-center" data-aos="fade-up">
+        <h2 id="cta-heading" class="text-3xl font-bold mb-6 gradient-text">
+          Pronto para Desenvolver seu Projeto?
+        </h2>
+        <p class="text-gray-300 mb-8 text-lg max-w-3xl mx-auto">
+          Entre em contato conosco e descubra como podemos ajudar sua empresa a alcançar seus objetivos com soluções de software personalizadas.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="orcamento.html" class="btn-gradient">Solicitar Orçamento</a>
+          <a href="contato.html" class="btn-outline">Fale Conosco</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Load header and footer
+    fetch('header.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        // Initialize header-specific scripts
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          });
+        }
+        
+        if (closeMobileMenuButton && mobileMenu) {
+          closeMobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error loading header:', error);
+      });
+
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        // Initialize footer-specific scripts
+        const scrollTopButton = document.getElementById('scroll-top');
+        if (scrollTopButton) {
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+              scrollTopButton.classList.remove('opacity-0', 'invisible');
+              scrollTopButton.classList.add('opacity-100', 'visible');
+            } else {
+              scrollTopButton.classList.remove('opacity-100', 'visible');
+              scrollTopButton.classList.add('opacity-0', 'invisible');
+            }
+          });
+          
+          scrollTopButton.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+        
+        // Add event listeners to all footer links to ensure they work
+        const footerLinks = document.querySelectorAll('#footer-container a');
+        footerLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+              e.preventDefault();
+              window.location.href = href;
+            }
+          });
+        });
+      })
+      .catch(error => {
+        console.error('Error loading footer:', error);
+      });
+  </script>
+</body>
+</html>

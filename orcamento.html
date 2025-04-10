@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Lemon Software - Solicite um orçamento personalizado para suas necessidades de software e automação">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Lemon Software - Orçamento</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <style>
+    :root {
+      --primary: #FFD700;
+      --secondary: #1a1a1a;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--secondary);
+      overflow-x: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-gradient {
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      transition: all 0.3s ease;
+    }
+
+    .hover-glow {
+      transition: all 0.3s ease;
+    }
+
+    .hover-glow:hover {
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 215, 0, 0.3);
+      border-radius: 50%;
+      animation: particle-float 15s infinite linear;
+    }
+
+    @keyframes particle-float {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      50% { transform: translateY(-100px) translateX(100px); opacity: 1; }
+      100% { transform: translateY(-200px) translateX(0); opacity: 0; }
+    }
+
+    .form-success {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body class="text-white">
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-effect">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold gradient-text">Lemon Software</a>
+        <div class="hidden md:flex items-center">
+          <a href="index.html" class="nav-link">Início</a>
+          <a href="sobre-nos.html" class="nav-link">Sobre</a>
+          <a href="clientes.html" class="nav-link">Clientes</a>
+          <a href="orcamento.html" class="nav-link">Orçamento</a>
+          <div class="relative group ml-6">
+            <a href="solucoes-novo.html" class="nav-link">Soluções</a>
+            <div class="absolute hidden group-hover:block w-48 bg-dark-800 rounded-lg shadow-lg py-2">
+              <a href="desenvolvimento.html" class="block px-4 py-2 text-gray-300 hover:text-primary">Desenvolvimento</a>
+              <a href="automacao.html" class="block px-4 py-2 text-gray-300 hover:text-primary">Automação</a>
+            </div>
+          </div>
+        </div>
+        <button class="md:hidden text-white" id="mobile-menu-button" aria-label="Menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 bg-dark-900 z-40 hidden" id="mobile-menu">
+    <div class="container mx-auto px-4 py-20">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-xl font-semibold hover:text-primary transition">Início</a>
+        <a href="sobre-nos.html" class="text-xl font-semibold hover:text-primary transition">Sobre</a>
+        <a href="clientes.html" class="text-xl font-semibold hover:text-primary transition">Clientes</a>
+        <a href="orcamento.html" class="text-xl font-semibold hover:text-primary transition">Orçamento</a>
+        <a href="solucoes-novo.html" class="text-xl font-semibold hover:text-primary transition">Soluções</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section pt-32" aria-labelledby="hero-heading">
+      <div class="container mx-auto px-6 text-center">
+        <h1 id="hero-heading" class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
+          <span class="gradient-text">Solicite um Orçamento</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Preencha o formulário abaixo e nossa equipe entrará em contato para discutir sua necessidade.
+        </p>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="section" aria-labelledby="form-heading">
+      <div class="container mx-auto px-6">
+        <h2 id="form-heading" class="sr-only">Formulário de Orçamento</h2>
+        <div class="max-w-2xl mx-auto glass-effect p-8 rounded-xl" data-aos="fade-up">
+          <form id="budgetForm" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nome Completo</label>
+              <input type="text" id="name" name="name" required
+                class="form-input w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-green-500 focus:ring-1 focus:ring-green-500">
+              <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+            </div>
+
+            <div>
+              <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Empresa</label>
+              <input type="text" id="company" name="company" required
+                class="form-input w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-green-500 focus:ring-1 focus:ring-green-500">
+              <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-2">E-mail</label>
+              <input type="email" id="email" name="email" required
+                class="form-input w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-green-500 focus:ring-1 focus:ring-green-500">
+              <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Telefone</label>
+              <input type="tel" id="phone" name="phone" required
+                class="form-input w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-green-500 focus:ring-1 focus:ring-green-500">
+              <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+            </div>
+
+            <div>
+              <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Serviço de Interesse</label>
+              <select id="service" name="service" required
+                class="form-input w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-green-500 focus:ring-1 focus:ring-green-500">
+                <option value="">Selecione um serviço</option>
+                <option value="kraken">Kraken ERP</option>
+                <option value="desenvolvimento">Desenvolvimento</option>
+                <option value="automacao">Automação</option>
+              </select>
+              <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mensagem</label>
+              <textarea id="message" name="message" rows="4" required
+                class="form-input w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-green-500 focus:ring-1 focus:ring-green-500"></textarea>
+              <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+            </div>
+
+            <div class="flex items-center">
+              <input type="checkbox" id="privacy" name="privacy" required
+                class="form-checkbox h-4 w-4 text-green-500 rounded border-gray-700 bg-gray-800/50 focus:ring-green-500">
+              <label for="privacy" class="ml-2 block text-sm text-gray-400">
+                Concordo com a <a href="#" class="text-green-400 hover:text-green-300">política de privacidade</a>
+              </label>
+              <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+            </div>
+
+            <button type="submit"
+              class="btn-gradient w-full text-white px-6 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition">
+              Enviar Solicitação
+            </button>
+          </form>
+
+          <!-- Success Message -->
+          <div id="formSuccess" class="form-success text-center py-8">
+            <div class="text-green-400 text-5xl mb-4">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Solicitação Enviada!</h3>
+            <p class="text-gray-300 mb-6">Obrigado pelo seu interesse. Nossa equipe entrará em contato em breve.</p>
+            <button id="newRequestBtn" class="btn-gradient text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition">
+              Nova Solicitação
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section" aria-labelledby="why-choose-us">
+      <div class="container mx-auto px-6">
+        <h2 id="why-choose-us" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+          Por Que Escolher a Lemon Software?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="glass-effect p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Expertise Técnica</h3>
+            <p class="text-gray-300">Nossa equipe é formada por profissionais altamente qualificados com experiência em diversas tecnologias.</p>
+          </div>
+          <div class="glass-effect p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Soluções Personalizadas</h3>
+            <p class="text-gray-300">Desenvolvemos soluções sob medida para atender às necessidades específicas do seu negócio.</p>
+          </div>
+          <div class="glass-effect p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Suporte Contínuo</h3>
+            <p class="text-gray-300">Oferecemos suporte técnico e acompanhamento contínuo após a entrega do projeto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" aria-labelledby="faq-heading">
+      <div class="container mx-auto px-6">
+        <h2 id="faq-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+          Perguntas Frequentes
+        </h2>
+        <div class="max-w-3xl mx-auto glass-effect p-8 rounded-xl" data-aos="fade-up">
+          <div class="space-y-6">
+            <div class="border-b border-gray-700 pb-4">
+              <h3 class="text-xl font-semibold mb-2">Quanto tempo leva para receber um orçamento?</h3>
+              <p class="text-gray-300">Normalmente, entramos em contato em até 48 horas úteis após o recebimento da sua solicitação.</p>
+            </div>
+            <div class="border-b border-gray-700 pb-4">
+              <h3 class="text-xl font-semibold mb-2">Como é feito o processo de desenvolvimento?</h3>
+              <p class="text-gray-300">Trabalhamos com metodologias ágeis, dividindo o projeto em sprints e mantendo o cliente envolvido em todo o processo.</p>
+            </div>
+            <div class="border-b border-gray-700 pb-4">
+              <h3 class="text-xl font-semibold mb-2">Vocês oferecem suporte após a entrega?</h3>
+              <p class="text-gray-300">Sim, oferecemos diferentes planos de suporte e manutenção para garantir que sua solução continue funcionando perfeitamente.</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">É possível fazer alterações durante o desenvolvimento?</h3>
+              <p class="text-gray-300">Sim, nossa metodologia permite ajustes e refinamentos ao longo do processo de desenvolvimento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Particles effect
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.animationDelay = `${Math.random() * 15}s`;
+      particlesContainer.appendChild(particle);
+    }
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Form validation and submission
+    document.getElementById('budgetForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Reset error messages
+      const errorMessages = document.querySelectorAll('.error-message');
+      errorMessages.forEach(el => {
+        el.classList.add('hidden');
+        el.textContent = '';
+      });
+      
+      // Validate form
+      let isValid = true;
+      
+      // Name validation
+      const nameInput = document.getElementById('name');
+      if (!nameInput.value.trim()) {
+        showError(nameInput, 'Por favor, informe seu nome completo');
+        isValid = false;
+      }
+      
+      // Email validation
+      const emailInput = document.getElementById('email');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        showError(emailInput, 'Por favor, informe um e-mail válido');
+        isValid = false;
+      }
+      
+      // Phone validation
+      const phoneInput = document.getElementById('phone');
+      if (!phoneInput.value.trim()) {
+        showError(phoneInput, 'Por favor, informe seu telefone');
+        isValid = false;
+      }
+      
+      // Service validation
+      const serviceInput = document.getElementById('service');
+      if (!serviceInput.value) {
+        showError(serviceInput, 'Por favor, selecione um serviço');
+        isValid = false;
+      }
+      
+      // Privacy checkbox validation
+      const privacyCheckbox = document.getElementById('privacy');
+      if (!privacyCheckbox.checked) {
+        showError(privacyCheckbox, 'Você precisa concordar com a política de privacidade');
+        isValid = false;
+      }
+      
+      // If form is valid, submit it
+      if (isValid) {
+        // Here you would normally send the data to your server
+        // For demonstration, we'll just show the success message
+        document.getElementById('budgetForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+        
+        // Log form data (for demonstration)
+        const formData = new FormData(this);
+        const formValues = {};
+        for (let [key, value] of formData.entries()) {
+          formValues[key] = value;
+        }
+        console.log('Form submitted:', formValues);
+      }
+    });
+    
+    // New request button
+    document.getElementById('newRequestBtn').addEventListener('click', function() {
+      document.getElementById('budgetForm').reset();
+      document.getElementById('budgetForm').style.display = 'block';
+      document.getElementById('formSuccess').style.display = 'none';
+    });
+    
+    // Helper function to show error messages
+    function showError(inputElement, message) {
+      const errorElement = inputElement.nextElementSibling;
+      errorElement.textContent = message;
+      errorElement.classList.remove('hidden');
+    }
+
+    // Load footer
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(html => {
+        document.getElementById('footer-container').innerHTML = html;
+        
+        // Initialize any footer-specific scripts or event listeners
+        const footerLinks = document.querySelectorAll('#footer-container a');
+        footerLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            // For demonstration - log clicks on footer links
+            console.log('Footer link clicked:', this.href);
+          });
+        });
+      })
+      .catch(error => {
+        console.error('Error loading footer:', error);
+        // Fallback footer if fetch fails
+        document.getElementById('footer-container').innerHTML = `
+          <footer class="bg-dark-900 text-white py-12">
+            <div class="container mx-auto px-4">
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                  <h3 class="text-xl font-bold mb-4 gradient-text">Lemon Software</h3>
+                  <p class="text-gray-400 mb-4">Transformando ideias em soluções digitais desde 2020</p>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                  <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-primary transition">Início</a></li>
+                    <li><a href="sobre-nos.html" class="text-gray-400 hover:text-primary transition">Sobre</a></li>
+                    <li><a href="orcamento.html" class="text-gray-400 hover:text-primary transition">Orçamento</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-4">Contato</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-center text-gray-400">
+                      <i class="fas fa-envelope mr-2"></i>
+                      <a href="mailto:contato@lemonsoftware.com.br" class="hover:text-primary transition">contato@lemonsoftware.com.br</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Lemon Software. Todos os direitos reservados.</p>
+              </div>
+            </div>
+          </footer>
+        `;
+      });
+  </script>
+</body>
+</html>

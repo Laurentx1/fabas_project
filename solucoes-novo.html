@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soluções - Lemon Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <style>
+        :root {
+            --primary: #FFD700;
+            --secondary: #1a1a1a;
+    }
+    
+    body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--secondary);
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hover-glow {
+            transition: all 0.3s ease;
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .service-card {
+            transition: all 0.5s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+    }
+    
+    .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 215, 0, 0.3);
+            border-radius: 50%;
+            animation: particle-float 15s infinite linear;
+        }
+
+        @keyframes particle-float {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            50% { transform: translateY(-100px) translateX(100px); opacity: 1; }
+            100% { transform: translateY(-200px) translateX(0); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="text-white">
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-effect">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <a href="index.html" class="text-2xl font-bold gradient-text">Lemon Software</a>
+          <div class="hidden md:flex items-center">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="sobre-nos.html" class="nav-link">Sobre</a>
+            <a href="clientes.html" class="nav-link">Clientes</a>
+            <a href="orcamento.html" class="nav-link">Orçamento</a>
+            <div class="relative group ml-6">
+              <a href="solucoes-novo.html" class="nav-link">Soluções</a>
+              <div class="absolute hidden group-hover:block w-48 bg-dark-800 rounded-lg shadow-lg py-2">
+              </div>
+            </div>
+          </div>
+          <button class="md:hidden text-white" id="mobile-menu-button">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="fixed inset-0 bg-dark-900 z-40 hidden" id="mobile-menu">
+      <div class="container mx-auto px-4 py-20">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-xl font-semibold hover:text-primary transition">Início</a>
+          <a href="sobre-nos.html" class="text-xl font-semibold hover:text-primary transition">Sobre</a>
+          <a href="clientes.html" class="text-xl font-semibold hover:text-primary transition">Clientes</a>
+          <a href="orcamento.html" class="text-xl font-semibold hover:text-primary transition">Orçamento</a>
+          <a href="solucoes-novo.html" class="text-xl font-semibold hover:text-primary transition">Soluções</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="section pt-32">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
+          <span class="gradient-text">Nossas Soluções</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Soluções tecnológicas personalizadas para impulsionar seu negócio
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section py-16">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-5xl md:text-7xl font-bold mb-6">
+            Entre em <span class="gradient-text">Contato</span>
+          </h2>
+          <p class="text-xl text-gray-300">Estamos prontos para ajudar seu negócio</p>
+        </div>
+        <div class="max-w-3xl mx-auto glass-effect p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <p class="text-gray-300 mb-8 text-lg">
+            Entre em contato conosco para saber mais sobre nossas soluções e como podemos ajudar seu negócio.
+          </p>
+          <a href="orcamento.html" class="btn-gradient inline-block text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition">
+            Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-gray-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Por que escolher a <span class="gradient-text">Lemon</span>?</h2>
+                <p class="text-xl text-gray-300">Nossos diferenciais</p>
+        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-effect p-8 rounded-2xl service-card" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4">Tecnologia de Ponta</h3>
+                    <p class="text-gray-300">Utilizamos as mais modernas tecnologias e frameworks do mercado.</p>
+        </div>
+                <div class="glass-effect p-8 rounded-2xl service-card" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Suporte 24/7</h3>
+                    <p class="text-gray-300">Nossa equipe está sempre disponível para ajudar você.</p>
+      </div>
+                <div class="glass-effect p-8 rounded-2xl service-card" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4">Resultados Garantidos</h3>
+                    <p class="text-gray-300">Comprometimento com a entrega de resultados excepcionais.</p>
+        </div>
+                <div class="glass-effect p-8 rounded-2xl service-card" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Preços Competitivos</h3>
+                    <p class="text-gray-300">Soluções de alta qualidade com preços acessíveis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-8">Pronto para transformar seu negócio?</h2>
+            <a href="contato.html" class="bg-yellow-500 text-gray-900 px-8 py-4 rounded-full font-medium hover:bg-yellow-400 transition duration-300 text-lg">
+                Fale Conosco
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+  <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Particles effect
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.animationDelay = `${Math.random() * 15}s`;
+            particlesContainer.appendChild(particle);
+        }
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Carregar o footer
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+          });
+  </script>
+</body>
+</html>

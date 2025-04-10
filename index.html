@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Lemon Software - Desenvolvimento de Software e Automação">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Lemon Software - Início</title>
+  
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Hero Section -->
+  <section class="section pt-32" aria-labelledby="hero-heading">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+          <h1 id="hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Transformando <span class="gradient-text">Ideias</span> em Soluções Digitais
+          </h1>
+          <p class="text-xl text-gray-300 mb-8">
+            Desenvolvimento de software personalizado e automação de processos para impulsionar seu negócio.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="orcamento.html" class="btn-gradient">Solicitar Orçamento</a>
+            <a href="solucoes-novo.html" class="btn-outline">Nossas Soluções</a>
+          </div>
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <img src="assets/images/hero-image.svg" alt="Lemon Software - Soluções Digitais" class="w-full max-w-lg mx-auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="services-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Nossas Soluções
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card service-card p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="text-xl font-bold mb-4">Desenvolvimento Web</h3>
+          <p class="text-gray-300 mb-6">Sites e sistemas web modernos e responsivos para sua empresa.</p>
+          <a href="desenvolvimento.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+        <div class="glass-card service-card p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-4">🤖</div>
+          <h3 class="text-xl font-bold mb-4">Automação</h3>
+          <p class="text-gray-300 mb-6">Otimize seus processos e aumente a eficiência operacional.</p>
+          <a href="automacao.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+        <div class="glass-card service-card p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-4">Kraken ERP</h3>
+          <p class="text-gray-300 mb-6">Sistema de gestão empresarial completo e integrado.</p>
+          <a href="kraken.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section bg-secondary-dark" aria-labelledby="features-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="features-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Por Que Escolher a Lemon Software?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-4">Tecnologia de Ponta</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Utilizamos as mais modernas tecnologias do mercado</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Desenvolvimento ágil e eficiente</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Soluções escaláveis e de alta performance</span>
+            </li>
+          </ul>
+        </div>
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-4">Foco no Cliente</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Atendimento personalizado e consultivo</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Suporte técnico especializado</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Compromisso com resultados</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" aria-labelledby="testimonials-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="testimonials-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        O Que Nossos Clientes Dizem
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-primary text-2xl mb-4">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="text-gray-300 mb-6">
+            "A Lemon Software transformou completamente nossos processos internos. A automação implementada reduziu nosso tempo operacional em 40%."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+              <i class="fas fa-user text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Carlos Silva</h4>
+              <p class="text-gray-400 text-sm">CEO, Tech Solutions</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-primary text-2xl mb-4">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="text-gray-300 mb-6">
+            "O sistema Kraken ERP nos proporcionou uma visão completa do nosso negócio. Agora tomamos decisões baseadas em dados reais e atualizados."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+              <i class="fas fa-user text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Ana Oliveira</h4>
+              <p class="text-gray-400 text-sm">Diretora Financeira, Grupo Nexus</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-primary text-2xl mb-4">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="text-gray-300 mb-6">
+            "O aplicativo desenvolvido pela Lemon Software superou todas as nossas expectativas. A interface intuitiva e a performance são impressionantes."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center mr-4">
+              <i class="fas fa-user text-primary"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Marcos Santos</h4>
+              <p class="text-gray-400 text-sm">CTO, Inovação Digital</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-secondary-dark" aria-labelledby="cta-heading">
+    <div class="container mx-auto px-6">
+      <div class="glass-card p-8 text-center" data-aos="fade-up">
+        <h2 id="cta-heading" class="text-3xl font-bold mb-6 gradient-text">
+          Pronto para Transformar seu Negócio?
+        </h2>
+        <p class="text-gray-300 mb-8 text-lg max-w-3xl mx-auto">
+          Entre em contato conosco e descubra como nossas soluções podem ajudar sua empresa a alcançar novos patamares de eficiência e inovação.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="orcamento.html" class="btn-gradient">Solicitar Orçamento</a>
+          <a href="contato.html" class="btn-outline">Fale Conosco</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Load header and footer
+    fetch('header.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        // Initialize header-specific scripts
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          });
+        }
+        
+        if (closeMobileMenuButton && mobileMenu) {
+          closeMobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error loading header:', error);
+      });
+
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        // Initialize footer-specific scripts
+        const scrollTopButton = document.getElementById('scroll-top');
+        if (scrollTopButton) {
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+              scrollTopButton.classList.remove('opacity-0', 'invisible');
+              scrollTopButton.classList.add('opacity-100', 'visible');
+            } else {
+              scrollTopButton.classList.remove('opacity-100', 'visible');
+              scrollTopButton.classList.add('opacity-0', 'invisible');
+            }
+          });
+          
+          scrollTopButton.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error loading footer:', error);
+      });
+  </script>
+</body>
+</html>

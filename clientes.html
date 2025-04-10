@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Lemon Software - Nossos clientes e cases de sucesso">
+  <link href="lemon/03/assets/images/favicon/favicon.png" rel="icon">
+  <title>Lemon Software - Clientes</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-white">
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-effect">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold gradient-text">Lemon Software</a>
+        <div class="hidden md:flex items-center">
+          <a href="index.html" class="nav-link">Início</a>
+          <a href="sobre-nos.html" class="nav-link">Sobre</a>
+          <a href="clientes.html" class="nav-link">Clientes</a>
+          <a href="orcamento.html" class="nav-link">Orçamento</a>
+          <div class="relative group ml-6">
+            <a href="solucoes-novo.html" class="nav-link">Soluções</a>
+            <div class="absolute hidden group-hover:block w-48 bg-dark-800 rounded-lg shadow-lg py-2">
+              <a href="desenvolvimento.html" class="block px-4 py-2 text-gray-300 hover:text-primary">Desenvolvimento</a>
+              <a href="automacao.html" class="block px-4 py-2 text-gray-300 hover:text-primary">Automação</a>
+            </div>
+          </div>
+        </div>
+        <button class="md:hidden text-white" id="mobile-menu-button">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 bg-dark-900 z-40 hidden" id="mobile-menu">
+    <div class="container mx-auto px-4 py-20">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-xl font-semibold hover:text-primary transition">Início</a>
+        <a href="sobre-nos.html" class="text-xl font-semibold hover:text-primary transition">Sobre</a>
+        <a href="clientes.html" class="text-xl font-semibold hover:text-primary transition">Clientes</a>
+        <a href="orcamento.html" class="text-xl font-semibold hover:text-primary transition">Orçamento</a>
+        <a href="solucoes-novo.html" class="text-xl font-semibold hover:text-primary transition">Soluções</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Nossos Clientes</h1>
+        <p class="text-xl text-gray-400 mb-8">Empresas que confiam em nossas soluções para transformar seus negócios.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="tech">Tecnologia</button>
+        <button class="filter-btn" data-filter="finance">Financeiro</button>
+        <button class="filter-btn" data-filter="health">Saúde</button>
+        <button class="filter-btn" data-filter="education">Educação</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Grid -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Tech Clients -->
+        <div class="client-card" data-category="tech">
+          <div class="glass-card p-6 text-center">
+            <img src="assets/images/clients/tech1.png" alt="Tech Company 1" class="w-32 h-32 mx-auto mb-4 client-logo">
+            <h3 class="text-xl font-bold mb-2">Tech Company 1</h3>
+            <p class="text-gray-400">Desenvolvimento de plataforma de e-commerce</p>
+          </div>
+        </div>
+        <div class="client-card" data-category="tech">
+          <div class="glass-card p-6 text-center">
+            <img src="assets/images/clients/tech2.png" alt="Tech Company 2" class="w-32 h-32 mx-auto mb-4 client-logo">
+            <h3 class="text-xl font-bold mb-2">Tech Company 2</h3>
+            <p class="text-gray-400">Sistema de gestão empresarial</p>
+          </div>
+        </div>
+
+        <!-- Finance Clients -->
+        <div class="client-card" data-category="finance">
+          <div class="glass-card p-6 text-center">
+            <img src="assets/images/clients/finance1.png" alt="Finance Company 1" class="w-32 h-32 mx-auto mb-4 client-logo">
+            <h3 class="text-xl font-bold mb-2">Finance Company 1</h3>
+            <p class="text-gray-400">Automação de processos financeiros</p>
+          </div>
+        </div>
+        <div class="client-card" data-category="finance">
+          <div class="glass-card p-6 text-center">
+            <img src="assets/images/clients/finance2.png" alt="Finance Company 2" class="w-32 h-32 mx-auto mb-4 client-logo">
+            <h3 class="text-xl font-bold mb-2">Finance Company 2</h3>
+            <p class="text-gray-400">Sistema de análise de investimentos</p>
+          </div>
+          </div>
+
+        <!-- Health Clients -->
+        <div class="client-card" data-category="health">
+          <div class="glass-card p-6 text-center">
+            <img src="assets/images/clients/health1.png" alt="Health Company 1" class="w-32 h-32 mx-auto mb-4 client-logo">
+            <h3 class="text-xl font-bold mb-2">Health Company 1</h3>
+            <p class="text-gray-400">Sistema de gestão hospitalar</p>
+          </div>
+        </div>
+        <div class="client-card" data-category="health">
+          <div class="glass-card p-6 text-center">
+            <img src="assets/images/clients/health2.png" alt="Health Company 2" class="w-32 h-32 mx-auto mb-4 client-logo">
+            <h3 class="text-xl font-bold mb-2">Health Company 2</h3>
+            <p class="text-gray-400">Aplicativo de telemedicina</p>
+          </div>
+          </div>
+
+        <!-- Education Clients -->
+        <div class="client-card" data-category="education">
+          <div class="glass-card p-6 text-center">
+            <img src="assets/images/clients/edu1.png" alt="Education Company 1" class="w-32 h-32 mx-auto mb-4 client-logo">
+            <h3 class="text-xl font-bold mb-2">Education Company 1</h3>
+            <p class="text-gray-400">Plataforma de ensino a distância</p>
+          </div>
+        </div>
+        <div class="client-card" data-category="education">
+          <div class="glass-card p-6 text-center">
+            <img src="assets/images/clients/edu2.png" alt="Education Company 2" class="w-32 h-32 mx-auto mb-4 client-logo">
+            <h3 class="text-xl font-bold mb-2">Education Company 2</h3>
+            <p class="text-gray-400">Sistema de gestão escolar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="glass-card p-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Quer fazer parte dos nossos cases de sucesso?</h2>
+        <p class="text-gray-400 mb-8">Entre em contato conosco e vamos transformar seu negócio juntos.</p>
+        <a href="orcamento.html" class="btn-gradient">Solicitar Orçamento</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Particles effect
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.animationDelay = `${Math.random() * 15}s`;
+      particlesContainer.appendChild(particle);
+    }
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const clientCards = document.querySelectorAll('.client-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        clientCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Load footer with proper error handling
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error loading footer:', error);
+        // Fallback footer if fetch fails
+        document.getElementById('footer-container').innerHTML = `
+          <footer class="bg-dark-900 text-white py-12">
+            <div class="container mx-auto px-4">
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                  <h3 class="text-xl font-bold mb-4 gradient-text">Lemon Software</h3>
+                  <p class="text-gray-400 mb-4">Transformando ideias em soluções digitais desde 2020</p>
+                  <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                  <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-primary transition">Início</a></li>
+                    <li><a href="solucoes-novo.html" class="text-gray-400 hover:text-primary transition">Soluções</a></li>
+                    <li><a href="sobre-nos.html" class="text-gray-400 hover:text-primary transition">Sobre</a></li>
+                    <li><a href="clientes.html" class="text-gray-400 hover:text-primary transition">Clientes</a></li>
+                    <li><a href="orcamento.html" class="text-gray-400 hover:text-primary transition">Orçamento</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-4">Serviços</h3>
+                  <ul class="space-y-2">
+                    <li><a href="desenvolvimento.html" class="text-gray-400 hover:text-primary transition">Desenvolvimento Web</a></li>
+                    <li><a href="desenvolvimento.html" class="text-gray-400 hover:text-primary transition">Aplicativos Mobile</a></li>
+                    <li><a href="automacao.html" class="text-gray-400 hover:text-primary transition">Automação de Processos</a></li>
+                    <li><a href="automacao.html" class="text-gray-400 hover:text-primary transition">RPA</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-4">Contato</h3>
+                  <ul class="space-y-2">
+                    <li class="flex items-center text-gray-400">
+                      <i class="fas fa-envelope mr-2"></i>
+                      <a href="mailto:contato@lemonsoftware.com.br" class="hover:text-primary transition">contato@lemonsoftware.com.br</a>
+                    </li>
+                    <li class="flex items-center text-gray-400">
+                      <i class="fas fa-phone mr-2"></i>
+                      <a href="tel:+5511999999999" class="hover:text-primary transition">(11) 99999-9999</a>
+                    </li>
+                    <li class="flex items-center text-gray-400">
+                      <i class="fas fa-map-marker-alt mr-2"></i>
+                      São Paulo, SP
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Lemon Software. Todos os direitos reservados.</p>
+              </div>
+            </div>
+          </footer>
+        `;
+      });
+  </script>
+</body>
+</html>
+
+<style>
+/* Existing Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #FFD700;
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #1a1a1a;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.glass-effect {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.bg-dark-900 {
+  background-color: #121212;
+}
+
+.bg-dark-800 {
+    background-color: #1e1e1e;
+}
+
+.text-primary {
+  color: #FFD700;
+}
+
+/* Particles */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 215, 0, 0.6);
+  border-radius: 50%;
+  animation: moveParticles 15s linear infinite;
+}
+
+@keyframes moveParticles {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) translateX(calc(var(--random-x, 0) * 100vw)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Client Logo */
+.client-logo {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.client-card:hover .client-logo {
+    filter: grayscale(0%);
+}
+
+/* Footer Styles */
+.footer-link {
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+.footer-social-icon {
+  transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+/* Fix for glass-card styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+}
+
+/* Fix for filter buttons */
+.filter-btn {
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #1a1a1a;
+}
+</style>

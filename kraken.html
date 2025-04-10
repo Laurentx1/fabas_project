@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Lemon Software - Kraken ERP - Sistema de Gestão Empresarial">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Lemon Software - Kraken ERP</title>
+  
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Hero Section -->
+  <section class="section pt-32" aria-labelledby="hero-heading">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+          <h1 id="hero-heading" class="text-4xl md:text-5xl font-bold mb-6">
+            <span class="gradient-text">Kraken ERP</span>
+          </h1>
+          <p class="text-xl text-gray-300 mb-8">
+            Sistema de Gestão Empresarial completo e integrado para otimizar todos os processos da sua empresa.
+          </p>
+          <a href="orcamento.html" class="btn-gradient">Solicitar Demonstração</a>
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <img src="assets/images/kraken-dashboard.svg" alt="Kraken ERP Dashboard" class="w-full max-w-lg mx-auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" aria-labelledby="features-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="features-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Módulos do Kraken ERP
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-4">Gestão Financeira</h3>
+          <p class="text-gray-300 mb-6">Controle completo das finanças da sua empresa, com fluxo de caixa, contas a pagar e receber, conciliação bancária e relatórios gerenciais.</p>
+          <a href="orcamento.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-4">📦</div>
+          <h3 class="text-xl font-bold mb-4">Gestão de Estoque</h3>
+          <p class="text-gray-300 mb-6">Controle eficiente do seu estoque e suprimentos, com gestão de compras, fornecedores, inventário e alertas de estoque mínimo.</p>
+          <a href="orcamento.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl mb-4">👥</div>
+          <h3 class="text-xl font-bold mb-4">Gestão de Pessoas</h3>
+          <p class="text-gray-300 mb-6">Administre sua equipe de forma eficiente, com controle de ponto, folha de pagamento, férias, benefícios e avaliações de desempenho.</p>
+          <a href="orcamento.html" class="text-primary hover:text-primary-light transition">Saiba mais →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section bg-secondary-dark" aria-labelledby="benefits-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="benefits-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Benefícios do Kraken ERP
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-4">Para sua Empresa</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Redução de custos operacionais</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Aumento da produtividade</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Melhor tomada de decisão</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Integração entre departamentos</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Controle financeiro aprimorado</span>
+            </li>
+          </ul>
+        </div>
+        <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-4">Para sua Equipe</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Processos mais eficientes</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Menos trabalho manual</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Melhor comunicação</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Acesso a informações em tempo real</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Interface intuitiva e fácil de usar</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Showcase -->
+  <section class="section" aria-labelledby="showcase-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="showcase-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Recursos Exclusivos
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-bold mb-4">Dashboard Personalizado</h3>
+          <p class="text-gray-300 mb-6">
+            Visualize os principais indicadores do seu negócio em um painel totalmente personalizável, com gráficos e métricas em tempo real.
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Indicadores personalizáveis</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Atualização em tempo real</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Visualização por departamento</span>
+            </li>
+          </ul>
+        </div>
+        <div class="glass-card p-4" data-aos="fade-left">
+          <img src="assets/images/dashboard-preview.svg" alt="Dashboard Kraken ERP" class="rounded-lg">
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 glass-card p-4" data-aos="fade-right">
+          <img src="assets/images/mobile-app.svg" alt="Aplicativo Mobile Kraken ERP" class="rounded-lg">
+        </div>
+        <div class="order-1 md:order-2" data-aos="fade-left">
+          <h3 class="text-2xl font-bold mb-4">Aplicativo Mobile</h3>
+          <p class="text-gray-300 mb-6">
+            Acesse as informações do seu negócio de qualquer lugar, a qualquer momento, com nosso aplicativo mobile para iOS e Android.
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Aprovações e autorizações</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Consulta de relatórios</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Notificações em tempo real</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section bg-secondary-dark" aria-labelledby="pricing-heading">
+    <div class="container mx-auto px-6">
+      <h2 id="pricing-heading" class="text-3xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">
+        Planos e Preços
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-2">Básico</h3>
+          <div class="text-4xl font-bold mb-4">R$ 299<span class="text-sm text-gray-400">/mês</span></div>
+          <p class="text-gray-300 mb-6">Ideal para pequenas empresas</p>
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Até 5 usuários</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Módulo Financeiro</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Módulo de Estoque</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Suporte por e-mail</span>
+            </li>
+          </ul>
+          <a href="orcamento.html" class="btn-outline w-full">Contratar</a>
+        </div>
+        
+        <div class="glass-card p-6 text-center relative transform scale-105 z-10" data-aos="fade-up" data-aos-delay="200">
+          <div class="absolute top-0 right-0 bg-primary text-secondary px-4 py-1 rounded-bl-lg rounded-tr-lg font-semibold">
+            Popular
+          </div>
+          <h3 class="text-xl font-bold mb-2">Profissional</h3>
+          <div class="text-4xl font-bold mb-4">R$ 599<span class="text-sm text-gray-400">/mês</span></div>
+          <p class="text-gray-300 mb-6">Para empresas em crescimento</p>
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Até 15 usuários</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Todos os módulos</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Aplicativo Mobile</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Suporte prioritário</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Treinamento online</span>
+            </li>
+          </ul>
+          <a href="orcamento.html" class="btn-gradient w-full">Contratar</a>
+        </div>
+        
+        <div class="glass-card p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+          <div class="text-4xl font-bold mb-4">R$ 999<span class="text-sm text-gray-400">/mês</span></div>
+          <p class="text-gray-300 mb-6">Para grandes empresas</p>
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Usuários ilimitados</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Todos os módulos</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Aplicativo Mobile Premium</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Suporte 24/7</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Treinamento presencial</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-primary mr-2"></i>
+              <span>Personalização exclusiva</span>
+            </li>
+          </ul>
+          <a href="orcamento.html" class="btn-outline w-full">Contratar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" aria-labelledby="cta-heading">
+    <div class="container mx-auto px-6">
+      <div class="glass-card p-8 text-center" data-aos="fade-up">
+        <h2 id="cta-heading" class="text-3xl font-bold mb-6 gradient-text">
+          Pronto para Transformar sua Gestão?
+        </h2>
+        <p class="text-gray-300 mb-8 text-lg max-w-3xl mx-auto">
+          Entre em contato conosco e descubra como o Kraken ERP pode ajudar sua empresa a alcançar novos patamares de eficiência e produtividade.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="orcamento.html" class="btn-gradient">Solicitar Demonstração</a>
+          <a href="contato.html" class="btn-outline">Fale Conosco</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Load header and footer
+    fetch('header.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        // Initialize header-specific scripts
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          });
+        }
+        
+        if (closeMobileMenuButton && mobileMenu) {
+          closeMobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error loading header:', error);
+      });
+
+    fetch('footer.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        // Initialize footer-specific scripts
+        const scrollTopButton = document.getElementById('scroll-top');
+        if (scrollTopButton) {
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+              scrollTopButton.classList.remove('opacity-0', 'invisible');
+              scrollTopButton.classList.add('opacity-100', 'visible');
+            } else {
+              scrollTopButton.classList.remove('opacity-100', 'visible');
+              scrollTopButton.classList.add('opacity-0', 'invisible');
+            }
+          });
+          
+          scrollTopButton.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+        
+        // Add event listeners to all footer links to ensure they work
+        const footerLinks = document.querySelectorAll('#footer-container a');
+        footerLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+              e.preventDefault();
+              window.location.href = href;
+            }
+          });
+        });
+      })
+      .catch(error => {
+        console.error('Error loading footer:', error);
+      });
+  </script>
+</body>
+</html>

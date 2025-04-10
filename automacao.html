@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Lemon Software - Automação de Processos e Sistemas">
+  <link href="lemon/03/assets/images/favicon/favicon.png" rel="icon">
+  <title>Lemon Software - Automação</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-white">
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-effect">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold gradient-text">Lemon Software</a>
+        <div class="hidden md:flex items-center">
+          <a href="index.html" class="nav-link">Início</a>
+          <a href="sobre-nos.html" class="nav-link">Sobre</a>
+          <a href="clientes.html" class="nav-link">Clientes</a>
+          <a href="orcamento.html" class="nav-link">Orçamento</a>
+          <div class="relative group ml-6">
+            <a href="solucoes-novo.html" class="nav-link">Soluções</a>
+            <div class="absolute hidden group-hover:block w-48 bg-dark-800 rounded-lg shadow-lg py-2">
+              <a href="desenvolvimento.html" class="block px-4 py-2 text-gray-300 hover:text-primary">Desenvolvimento</a>
+              <a href="automacao.html" class="block px-4 py-2 text-gray-300 hover:text-primary">Automação</a>
+            </div>
+          </div>
+        </div>
+        <button class="md:hidden text-white" id="mobile-menu-button">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 bg-dark-900 z-40 hidden" id="mobile-menu">
+    <div class="container mx-auto px-4 py-20">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="text-xl font-semibold hover:text-primary transition">Início</a>
+        <a href="sobre-nos.html" class="text-xl font-semibold hover:text-primary transition">Sobre</a>
+        <a href="clientes.html" class="text-xl font-semibold hover:text-primary transition">Clientes</a>
+        <a href="orcamento.html" class="text-xl font-semibold hover:text-primary transition">Orçamento</a>
+        <a href="solucoes-novo.html" class="text-xl font-semibold hover:text-primary transition">Soluções</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Automação de Processos</h1>
+        <p class="text-xl text-gray-400 mb-8">Otimize seus processos e aumente a eficiência com nossas soluções de automação</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card p-6 text-center">
+          <div class="text-4xl mb-4">🤖</div>
+          <h3 class="text-xl font-bold mb-4">RPA - Automação Robótica</h3>
+          <p class="text-gray-400">Automatize tarefas repetitivas e aumente a produtividade da sua equipe.</p>
+          <a href="orcamento.html" class="mt-4 inline-block text-primary hover:text-primary-light">Saiba mais →</a>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold mb-4">Automação de Workflows</h3>
+          <p class="text-gray-400">Fluxos de trabalho automatizados para otimizar seus processos internos.</p>
+          <a href="orcamento.html" class="mt-4 inline-block text-primary hover:text-primary-light">Saiba mais →</a>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <div class="text-4xl mb-4">🔌</div>
+          <h3 class="text-xl font-bold mb-4">Integração de Sistemas</h3>
+          <p class="text-gray-400">Conecte diferentes sistemas e plataformas para um fluxo de dados contínuo.</p>
+          <a href="orcamento.html" class="mt-4 inline-block text-primary hover:text-primary-light">Saiba mais →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Benefícios da Automação</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass-card p-6">
+          <h3 class="text-xl font-bold mb-4">Para sua Empresa</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Redução de custos operacionais</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Aumento da produtividade</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Menos erros humanos</span>
+            </li>
+          </ul>
+        </div>
+        <div class="glass-card p-6">
+          <h3 class="text-xl font-bold mb-4">Para sua Equipe</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Foco em tarefas estratégicas</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Processos mais eficientes</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-3">✓</span>
+              <span class="text-gray-300">Melhor experiência de trabalho</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="glass-card p-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Pronto para Automatizar seus Processos?</h2>
+        <p class="text-gray-400 mb-8">Entre em contato conosco e descubra como podemos ajudar sua empresa</p>
+        <a href="orcamento.html" class="btn-gradient">Solicitar Orçamento</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Particles effect
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.animationDelay = `${Math.random() * 15}s`;
+      particlesContainer.appendChild(particle);
+    }
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Carregar o footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
